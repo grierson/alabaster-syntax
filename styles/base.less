@@ -1,0 +1,44 @@
+@import "syntax-variables";
+
+atom-text-editor {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .selection {
+    background: @orange;
+  }
+
+  .line.cursor-line {
+    background-color: @light-grey;
+  }
+
+  .syntax--entity.syntax--global.syntax--clojure {
+    color: @dark-blue;
+  }
+
+  .syntax--string {
+    color: @green;
+  }
+
+  .syntax--constant {
+    color: @purple;
+  }
+
+  .syntax--comment {
+    color: @dark-red;
+  }
+}
